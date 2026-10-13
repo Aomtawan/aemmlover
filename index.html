@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#eaf6ff" />
+  <meta name="description" content="A little love mission made just for you 💙" />
+  <title>Doraemon's Love Mission 💙</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="floating-decor" aria-hidden="true">
+    <span>♡</span><span>✦</span><span>💙</span><span>♡</span><span>✧</span>
+  </div>
+
+  <main class="page-shell">
+    <section class="card" id="homePage">
+      <p class="eyebrow" id="siteTitle">AOMAEM'S LOVE MISSION</p>
+      <div class="photo-frame">
+        <img id="heroImage" src="images/photo1.png" alt="รูปภาพน่ารัก" />
+        <div class="photo-decor">♡　✦　♡</div>
+      </div>
+      <h1 id="mainQuestion">ให้ทายนี้ตัวอะไรเอ่ย</h1>
+      <p class="subtitle" id="homeMessage">นี้คือหมี..แต่ไม่ใช่หมีธรรมดานะ..เพราะมันคือ..หมีใจให้เรายัง 💙</p>
+
+      <div class="button-row">
+        <button class="btn btn-blue" id="talkButton">💛 หมีแล้ว</button>
+        <button class="btn btn-yellow runaway" id="friendButton">ม่ายหมี</button>
+      </div>
+      <p class="tiny-note">ลองเลือกคำตอบดูสิ ✨</p>
+    </section>
+
+    <section class="card surprise-card hidden" id="surprisePage">
+      <p class="eyebrow">MISSION COMPLETED</p>
+      <div class="photo-frame second-frame">
+        <img id="successImage" src="images/photo6.jpeg" alt="รูปภาพแห่งความสุข" />
+      </div>
+      <h1 id="successTitle">เย้! ตอนนี้หมีแย้ววนะ 💙</h1>
+      <div class="message-panel">
+        <p id="successMessage">ภารกิจสำเร็จแล้ว!</p>
+        <p id="successSubMessage">ช่วงนี้ฝนตกบ่อย แถวบ้านเราตกแรงมาก แต่ตอนนี้เริ่มซาแล้ว...ซารังเฮฮฮฮ</p>
+      </div>
+      <p class="closing-message" id="closingMessage">เราคิดมุขไม่ออกแล้ว...<br>งั้นคิดถึงเธอก่อนละกันง่ายดี</p>
+      <p class="return-note" id="returnMessage">แคปหน้าจอนี้แล้วส่งกลับมาหาเราได้นะ 💌</p>
+      <button class="btn btn-pink heart-button" id="heartButton">ปล่อยหัวใจ 💛　♡</button>
+      <button class="text-button" id="backButton">กลับไปหน้าแรก</button>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <div class="music-controls">
+    <button class="music-button" id="musicToggle" aria-pressed="false">♫ เปิดเพลง</button>
+    <span id="musicStatus">เพลงอะไรเนี่ย</span>
+  </div>
+  <audio id="bgMusic" src="music.mp3" loop preload="none"></audio>
+
+  <button class="edit-toggle" id="editToggle" title="แก้ไขข้อความในเว็บ">✎ แก้ไขข้อความ</button>
+  <aside class="editor hidden" id="editor">
+    <div class="editor-head">
+      <h2>แก้ไขข้อความในเว็บ</h2>
+      <button id="closeEditor" aria-label="ปิด">✕</button>
+    </div>
+    <label>หัวข้อด้านบน<input data-edit="siteTitle" value="DORAEMON'S LOVE MISSION"></label>
+    <label>คำถามหน้าแรก<textarea data-edit="mainQuestion">เราอยากเป็นคนพิเศษของเธอได้ไหม?</textarea></label>
+    <label>ข้อความหน้าแรก<textarea data-edit="homeMessage">ถ้าเป็นไปได้... ขอให้กระเป๋าวิเศษพาเราไปอยู่ในใจเธอหน่อยนะ 💙</textarea></label>
+    <label>ปุ่มสีน้ำเงิน<input data-edit="talkButton" value="💛 ลองคุยกันนะ"></label>
+    <label>ปุ่มหนี<input data-edit="friendButton" value="ขอเป็นเพื่อนก่อนนะ"></label>
+    <label>หัวข้อหน้าสำเร็จ<textarea data-edit="successTitle">เย้! งั้นเราไปคุยกันนะ 💙</textarea></label>
+    <label>ข้อความหลัก<textarea data-edit="successMessage">ภารกิจสารภาพรักสำเร็จแล้ว!</textarea></label>
+    <label>ข้อความรอง<textarea data-edit="successSubMessage">ต่อจากนี้ขอให้มีแต่เรื่องน่ารัก ๆ ระหว่างเรานะ</textarea></label>
+    <label>ข้อความปิดท้าย<textarea data-edit="closingMessage">เราอาจไม่มีกระเป๋าวิเศษ... แต่เราจะตั้งใจทำให้เธอยิ้มได้ทุกวันเลย</textarea></label>
+    <label>ข้อความบรรทัดล่าง<textarea data-edit="returnMessage">แคปหน้าจอนี้แล้วส่งกลับมาหาเราได้นะ 💌</textarea></label>
+    <p class="editor-tip">แผงนี้ใช้ทดลองแก้ข้อความทันทีบนอุปกรณ์ปัจจุบัน หากต้องการแก้แบบถาวรให้แก้ข้อความใน index.html แล้วอัปโหลดเว็บใหม่</p>
+    <button class="btn btn-blue save-button" id="resetButton">คืนค่าเริ่มต้น</button>
+  </aside>
+  <script src="script.js"></script>
+</body>
+</html>
